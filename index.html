@@ -3,159 +3,413 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rizx — Cyberpunk Portfolio</title>
+  <title>Rizx — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- decorative blobs (purely visual) -->
-  <div class="bg-blob blob-1" aria-hidden></div>
-  <div class="bg-blob blob-2" aria-hidden></div>
+  <!-- Particle canvas (covers background) -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-  <div class="container">
-    <header class="site-header">
-      <div class="brand">
-        <a href="#top" class="logo-link" title="Home">
-          <div class="logo">
-            <img src="logo-placeholder.png" alt="Rizx logo">
-          </div>
-        </a>
+  <!-- NAVBAR -->
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
 
-        <div class="title">
-          <h1>Rizx</h1>
-          <p class="subtitle">Minecraft developer • Discord server & bot developer</p>
-        </div>
+      <a href="#top" class="logo-mini" aria-label="Home">
+        <img src="rizx-logo.png" alt="Rizx logo">
+      </a>
+
+      <div class="headline" aria-hidden="false">
+        <div class="name">Rizx</div>
       </div>
 
-      <nav class="site-nav" role="navigation" aria-label="Main">
+      <button id="menuBtn" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menuPanel" class="menu-panel" aria-hidden="true" role="navigation">
+        <a href="#shotdevs">ShotDevs</a>
         <a href="#about">About</a>
-        <a href="#roles">Server Roles</a>
+        <a href="#roles">Roles</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="top">
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p class="small">
-          Hey — I’m <strong>Rizx</strong>. I design and build Minecraft plugins/mods and create custom Discord servers and bots
-          that scale. Replace the placeholders below with your real descriptions, achievements, and screenshots.
-        </p>
-      </section>
+  <main>
 
-      <section id="roles" class="card">
-        <h2>Server Roles</h2>
-        <div class="roles">
-          <div class="role">
-            <h3>Owner / Admin</h3>
-            <p class="small">Manage server configuration, permissions, and release cycles. (placeholder)</p>
-          </div>
-
-          <div class="role">
-            <h3>Moderator</h3>
-            <p class="small">Moderation tools, automod rules, member support. (placeholder)</p>
-          </div>
-
-          <div class="role">
-            <h3>Bot Manager</h3>
-            <p class="small">Setup commands, role-sync, integrations, uptime monitoring. (placeholder)</p>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-logo floating" aria-hidden="true">
+          <div class="logo-circle big">
+            <img src="rizx-logo.png" alt="Rizx Logo">
           </div>
         </div>
-      </section>
+        <h1 id="hero-title" class="hero-name">Rizx</h1>
+      </div>
+    </section>
 
-      <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="chips" aria-hidden>
-          <div class="chip">Minecraft development</div>
-          <div class="chip">Discord bots</div>
-          <div class="chip">Server automation</div>
-          <div class="chip">C++</div>
-          <div class="chip">SQL</div>
-          <div class="chip">API integrations</div>
+    <!-- SHOTDEVS SECTION -->
+    <section id="shotdevs" class="sd-card reveal" aria-labelledby="sd-title">
+      <div class="sd-inner">
+
+        <span class="sd-badge">Founder</span>
+
+        <div class="sd-hero">
+          <div class="sd-logo" aria-hidden="true">
+            <img src="rizx-logo.png" alt="ShotDevs Logo">
+          </div>
+
+          <div class="sd-title-wrap">
+            <h3 id="sd-title">ShotDevs Studio</h3>
+            <p class="sd-sub">Building automation &amp; tooling for servers &amp; communities.</p>
+          </div>
         </div>
 
-        <div class="languages">
-          <h3>Languages</h3>
-          <ul class="small">
-            <li>C++ — placeholder level: intermediate</li>
-            <li>SQL — placeholder level: intermediate</li>
-            <li>JavaScript / Node.js — placeholder: add your level</li>
-          </ul>
-        </div>
-      </section>
+        <p class="sd-desc">ShotDevs crafts stable, tested tools for Discord &amp; Minecraft — bots, panels, and server utilities designed for uptime and easy control.</p>
 
-      <section id="projects" class="card">
-        <h2>Projects</h2>
+        <ul class="sd-features" role="list" aria-label="ShotDevs features">
+          <li class="feat reveal-item">
+            <span class="feat-icon" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M16 3v4M8 3v4"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/></svg>
+            </span>
+            <span class="feat-text">Custom Discord bots</span>
+          </li>
 
-        <article class="project">
-          <div class="screenshot">Screenshot</div>
-          <div class="project-info">
-            <strong>Project Name Placeholder</strong>
-            <p class="small">Short description. Tech: C++, SQL, Node.js. Replace with real links and notes.</p>
-            <div class="project-links">
-              <a href="#" class="link">GitHub</a>
-              <a href="#" class="link">Live</a>
+          <li class="feat reveal-item">
+            <span class="feat-icon" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+            </span>
+            <span class="feat-text">Web control panels</span>
+          </li>
+
+          <li class="feat reveal-item">
+            <span class="feat-icon" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 13v6a1 1 0 0 1-1 1h-6"/><path d="M8 11V5a1 1 0 0 1 1-1h6"/><path d="M3 8h3v3H3z"/></svg>
+            </span>
+            <span class="feat-text">Minecraft utilities</span>
+          </li>
+        </ul>
+
+        <div class="sd-actions">
+          <a class="btn primary" href="#contact" role="button">Contact / DM</a>
+
+          <details class="btn secondary details-btn">
+            <summary>More</summary>
+            <div class="details-panel" aria-hidden="false">
+              <a href="#" class="small-link">ShotDevs GitHub</a>
+              <a href="#" class="small-link">Join Discord</a>
             </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="screenshot">Screenshot</div>
-          <div class="project-info">
-            <strong>Another Project Placeholder</strong>
-            <p class="small">Short description. Replace with your details and images.</p>
-            <div class="project-links">
-              <a href="#" class="link">GitHub</a>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p class="small">Reach out — replace placeholders with your actual handles and addresses.</p>
-
-        <div class="contact">
-          <a class="icon" href="mailto:your.email@example.com" title="Email" aria-label="Email">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="3" y="5" width="18" height="14" rx="2" ry="2" stroke-width="1.2" stroke-linejoin="round" />
-            </svg>
-          </a>
-
-          <a class="icon" href="https://discord.gg/your-link" title="Discord" aria-label="Discord">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M8 10s.5 1 2 1 2-1 2-1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 10s-.5 1-2 1-2-1-2-1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 21v-2a8 8 0 00-16 0v2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="9.5" cy="11" r="0.8" />
-              <circle cx="14.5" cy="11" r="0.8" />
-            </svg>
-          </a>
-
-          <a class="icon" href="https://instagram.com/yourname" title="Instagram" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="4" ry="4" stroke-width="1.6"/>
-              <circle cx="12" cy="12" r="3.2" stroke-width="1.6"/>
-              <circle cx="18" cy="6" r="0.6" />
-            </svg>
-          </a>
+          </details>
         </div>
-      </section>
 
-      <footer class="page-footer">
-        <div class="footer-inner">
-          <div class="copyright">©shotdevs</div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="card reveal" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">
+        <span class="icon-wrap" aria-hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+        About
+      </h2>
+      <p>I'm <strong>Rizx</strong>, a Minecraft plugin creator and Discord bot developer. I design servers, automations, and tools to make moderating easier.</p>
+    </section>
+
+    <!-- ROLES -->
+    <section id="roles" class="card reveal" aria-labelledby="roles-title">
+      <h2 id="roles-title" class="section-title">
+        <span class="icon-wrap" aria-hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3l7 7-7-7z"/><path d="M10 21l-7-7 7 7z"/></svg>
+        </span>
+        Server Roles
+      </h2>
+
+      <div class="roles-grid">
+        <div class="role reveal-item">
+          <div class="role-icon" aria-hidden>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12l4-7 4 7 4-5 4 5 4-7 4 7"/></svg>
+          </div>
+          <h3>Owner / Admin</h3>
+          <p>Server configuration, permissions, optimization.</p>
         </div>
-      </footer>
-    </main>
-  </div>
 
-  <button class="go-top" aria-label="Go to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M5 15l7-7 7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+        <div class="role reveal-item">
+          <div class="role-icon" aria-hidden>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-4 9-8 10-4-1-8-5-8-10V6l8-4z"/></svg>
+          </div>
+          <h3>Moderator</h3>
+          <p>Member support, automod rules, safety tools.</p>
+        </div>
+
+        <div class="role reveal-item">
+          <div class="role-icon" aria-hidden>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M16 3v4M8 3v4"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/></svg>
+          </div>
+          <h3>Bot Manager</h3>
+          <p>Role-sync, logging, integrations, uptime systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card reveal" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">
+        <span class="icon-wrap" aria-hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </span>
+        Skills
+      </h2>
+
+      <ul class="skill-list">
+        <li class="reveal-item">Minecraft developer</li>
+        <li class="reveal-item">Discord bot developer</li>
+        <li class="reveal-item">C++</li>
+        <li class="reveal-item">SQL</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS (UPDATED: SVG icons, no GitHub) -->
+    <section id="projects" class="card reveal" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">
+        <span class="icon-wrap" aria-hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h6l2 3h10v9a1 1 0 0 1-1 1H3z"/></svg>
+        </span>
+        Projects
+      </h2>
+
+      <!-- Updated project card with icons (no GitHub button) -->
+      <div class="project reveal-item" style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03);">
+        <h3 style="margin:0 0 8px;font-size:1.05rem;font-weight:800;">Rizx — Services & Work</h3>
+
+        <div style="margin:8px 0;color:var(--soft);line-height:1.6;">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+            <!-- laptop / code SVG (C++) -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
+              <rect x="2" y="4" width="20" height="12" rx="2"/><path d="M8 20h8"/>
+            </svg>
+            <strong>C++</strong>
+            <span style="margin-left:8px;color:var(--soft)">|</span>
+            <!-- database SVG (SQL) -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;margin-left:10px;">
+              <ellipse cx="12" cy="6" rx="9" ry="3"/><path d="M3 6v6c0 1.657 4.03 3 9 3s9-1.343 9-3V6"/><path d="M3 12v6c0 1.657 4.03 3 9 3s9-1.343 9-3v-6"/>
+            </svg>
+            <strong style="margin-left:6px">SQL</strong>
+            <span style="margin-left:8px;color:var(--soft)">|</span>
+            <!-- controller SVG (Minecraft dev) -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;margin-left:10px;">
+              <path d="M6 12v.01"/><path d="M10 12v.01"/><path d="M14 12v.01"/><path d="M18 12v.01"/><rect x="2" y="6" width="20" height="12" rx="3"/>
+            </svg>
+            <strong style="margin-left:6px">Minecraft developer</strong>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+            <!-- robot SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
+              <rect x="3" y="7" width="18" height="11" rx="2"/><path d="M16 3v4M8 3v4"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/>
+            </svg>
+            <span>Creating custom Discord bots &amp; automations</span>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+            <!-- wrench SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
+              <path d="M14.7 9.3a6 6 0 1 0-8.5 8.5l5.3-5.3 3.2 3.2 2.8-2.8-3.2-3.2 5.3-5.3z"/>
+            </svg>
+            <span>Let’s build something awesome together!</span>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;">
+            <!-- mail / dm SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
+              <path d="M3 8l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/>
+            </svg>
+            <span>DM for work</span>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn primary" href="mailto:you@example.com" style="padding:8px 12px;font-weight:800;font-size:.95rem;">Contact / DM</a>
+          <a class="btn secondary" href="#" style="padding:8px 12px;font-weight:800;font-size:.95rem;">Live / Demo</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card reveal" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">
+        <span class="icon-wrap" aria-hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+        </span>
+        Contact
+      </h2>
+
+      <div class="contact-icons">
+        <a class="c-icon" aria-label="Email" href="mailto:you@example.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+        </a>
+
+        <a class="c-icon" aria-label="Discord" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10s.5 1 2 1 2-1 2-1"/><path d="M3 7s1 9 9 9 9-9 9-9"/></svg>
+        </a>
+
+        <a class="c-icon" aria-label="Instagram" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3"/><path d="M17 7h.01"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <a href="https://shotdevs.live" target="_blank" rel="noopener noreferrer">©rizx | built by shotdevs</a>
+    </footer>
+
+  </main>
+
+  <!-- GO TOP -->
+  <a href="#top" class="go-top" aria-label="Go to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 15l7-7 7 7"/></svg>
+  </a>
+
+  <!-- SCRIPTS (particles, reveals, menu, scroll) -->
+  <script>
+  // small helper: clamp
+  function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+  // Particle background (canvas, lightweight)
+  (function(){
+    const canvas = document.getElementById('particles-canvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth * devicePixelRatio;
+    let h = canvas.height = innerHeight * devicePixelRatio;
+    canvas.style.width = innerWidth + 'px';
+    canvas.style.height = innerHeight + 'px';
+    ctx.scale(devicePixelRatio, devicePixelRatio);
+
+    const particles = [];
+    const PARTICLE_COUNT = Math.max(18, Math.floor(innerWidth / 72));
+
+    function rand(min, max){ return Math.random()*(max-min)+min; }
+
+    function create(){
+      for(let i=0;i<PARTICLE_COUNT;i++){
+        particles.push({
+          x: rand(0, innerWidth),
+          y: rand(0, innerHeight),
+          r: rand(1.6, 3.6),
+          vx: rand(-0.12, 0.12),
+          vy: rand(-0.03, 0.03),
+          alpha: rand(0.08, 0.28),
+          hue: rand(190, 210) // bluish
+        });
+      }
+    }
+    create();
+
+    function resize(){
+      w = canvas.width = innerWidth * devicePixelRatio;
+      h = canvas.height = innerHeight * devicePixelRatio;
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      ctx.scale(devicePixelRatio, devicePixelRatio);
+    }
+    addEventListener('resize', ()=>{
+      resize();
+    });
+
+    let last = performance.now();
+    function frame(now){
+      const dt = Math.min(40, now - last);
+      last = now;
+      ctx.clearRect(0,0,innerWidth, innerHeight);
+      for(const p of particles){
+        p.x += p.vx * (dt/16);
+        p.y += p.vy * (dt/16);
+
+        // wrap
+        if(p.x < -20) p.x = innerWidth + 20;
+        if(p.x > innerWidth + 20) p.x = -20;
+        if(p.y < -20) p.y = innerHeight + 20;
+        if(p.y > innerHeight + 20) p.y = -20;
+
+        // draw glow
+        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r*10);
+        g.addColorStop(0, `rgba(70,170,255, ${p.alpha})`);
+        g.addColorStop(1, 'rgba(70,170,255,0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r*8, 0, Math.PI*2);
+        ctx.fill();
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  // Section reveal animation (IntersectionObserver)
+  (function(){
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('inview');
+          // animate child reveal-items with delay
+          const items = entry.target.querySelectorAll('.reveal-item');
+          items.forEach((el, i) => {
+            el.style.transitionDelay = (i * 80) + 'ms';
+            el.classList.add('inview');
+          });
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+
+    document.querySelectorAll('.reveal').forEach(s => observer.observe(s));
+  })();
+
+  // menu toggle + aria
+  (function(){
+    const menuBtn = document.getElementById('menuBtn');
+    const panel = document.getElementById('menuPanel');
+    menuBtn.addEventListener('click', ()=>{
+      const open = menuBtn.classList.toggle('open');
+      panel.classList.toggle('open', open);
+      panel.setAttribute('aria-hidden', String(!open));
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    // close on link click
+    panel.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{ menuBtn.classList.remove('open'); panel.classList.remove('open'); panel.setAttribute('aria-hidden','true'); menuBtn.setAttribute('aria-expanded','false'); });
+    });
+  })();
+
+  // show go-top and navbar glow on scroll
+  (function(){
+    const goTop = document.querySelector('.go-top');
+    const topbar = document.querySelector('.topbar');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 420) goTop.classList.add('visible'); else goTop.classList.remove('visible');
+      // navbar glow
+      if(window.scrollY > 24) topbar.classList.add('scrolled'); else topbar.classList.remove('scrolled');
+    });
+  })();
+
+  // reduce motion: do fewer animations for users who prefer reduced motion
+  (function(){
+    const prefers = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if(prefers.matches){
+      document.querySelectorAll('.floating').forEach(el => el.classList.add('reduced'));
+      document.getElementById('particles-canvas').style.display = 'none';
+    }
+  })();
+
+  </script>
 </body>
-</html>
+  </html>
