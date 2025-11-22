@@ -8,11 +8,9 @@
 </head>
 
 <body>
-  <!-- Particle canvas (covers background) -->
   <canvas id="particles-canvas" aria-hidden="true"></canvas>
   <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- NAVBAR -->
   <header class="topbar" id="top">
     <div class="topbar-inner">
 
@@ -41,7 +39,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-logo floating" aria-hidden="true">
@@ -53,7 +50,6 @@
       </div>
     </section>
 
-    <!-- SHOTDEVS SECTION -->
     <section id="shotdevs" class="sd-card reveal" aria-labelledby="sd-title">
       <div class="sd-inner">
 
@@ -111,7 +107,6 @@
     </section>
 
 
-    <!-- ABOUT -->
     <section id="about" class="card reveal" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title">
         <span class="icon-wrap" aria-hidden>
@@ -122,7 +117,6 @@
       <p>I'm <strong>Rizx</strong>, a Minecraft plugin creator and Discord bot developer. I design servers, automations, and tools to make moderating easier.</p>
     </section>
 
-    <!-- ROLES -->
     <section id="roles" class="card reveal" aria-labelledby="roles-title">
       <h2 id="roles-title" class="section-title">
         <span class="icon-wrap" aria-hidden>
@@ -158,7 +152,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="card reveal" aria-labelledby="skills-title">
       <h2 id="skills-title" class="section-title">
         <span class="icon-wrap" aria-hidden>
@@ -175,7 +168,6 @@
       </ul>
     </section>
 
-    <!-- PROJECTS (UPDATED: SVG icons, no GitHub) -->
     <section id="projects" class="card reveal" aria-labelledby="projects-title">
       <h2 id="projects-title" class="section-title">
         <span class="icon-wrap" aria-hidden>
@@ -184,25 +176,21 @@
         Projects
       </h2>
 
-      <!-- Updated project card with icons (no GitHub button) -->
       <div class="project reveal-item" style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03);">
         <h3 style="margin:0 0 8px;font-size:1.05rem;font-weight:800;">Rizx — Services & Work</h3>
 
         <div style="margin:8px 0;color:var(--soft);line-height:1.6;">
           <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
-            <!-- laptop / code SVG (C++) -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
               <rect x="2" y="4" width="20" height="12" rx="2"/><path d="M8 20h8"/>
             </svg>
             <strong>C++</strong>
             <span style="margin-left:8px;color:var(--soft)">|</span>
-            <!-- database SVG (SQL) -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;margin-left:10px;">
               <ellipse cx="12" cy="6" rx="9" ry="3"/><path d="M3 6v6c0 1.657 4.03 3 9 3s9-1.343 9-3V6"/><path d="M3 12v6c0 1.657 4.03 3 9 3s9-1.343 9-3v-6"/>
             </svg>
             <strong style="margin-left:6px">SQL</strong>
             <span style="margin-left:8px;color:var(--soft)">|</span>
-            <!-- controller SVG (Minecraft dev) -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;margin-left:10px;">
               <path d="M6 12v.01"/><path d="M10 12v.01"/><path d="M14 12v.01"/><path d="M18 12v.01"/><rect x="2" y="6" width="20" height="12" rx="3"/>
             </svg>
@@ -210,7 +198,6 @@
           </div>
 
           <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
-            <!-- robot SVG -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
               <rect x="3" y="7" width="18" height="11" rx="2"/><path d="M16 3v4M8 3v4"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/>
             </svg>
@@ -218,7 +205,6 @@
           </div>
 
           <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
-            <!-- wrench SVG -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
               <path d="M14.7 9.3a6 6 0 1 0-8.5 8.5l5.3-5.3 3.2 3.2 2.8-2.8-3.2-3.2 5.3-5.3z"/>
             </svg>
@@ -226,7 +212,6 @@
           </div>
 
           <div style="display:flex;gap:10px;align-items:center;">
-            <!-- mail / dm SVG -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="flex:0 0 18px;">
               <path d="M3 8l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/>
             </svg>
@@ -242,7 +227,6 @@
 
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="card reveal" aria-labelledby="contact-title">
       <h2 id="contact-title" class="section-title">
         <span class="icon-wrap" aria-hidden>
@@ -257,7 +241,9 @@
         </a>
 
         <a class="c-icon" aria-label="Discord" href="rizx_sir">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10s.5 1 2 1 2-1 2-1"/><path d="M3 7s1 9 9 9 9-9 9-9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:24px; height:24px;">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037 19.018 19.018 0 0 0-1.526 3.127 17.655 17.655 0 0 0-3.657 0 19.018 19.018 0 0 0-1.526-3.127.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.679 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.946 2.419-2.157 2.419z"/>
+          </svg>
         </a>
 
         <a class="c-icon" aria-label="Instagram" href="https://www.instagram.com/rizx_devs?igsh=ZGd6eTdiaHU2MTh3&utm_source=qr">
@@ -266,24 +252,21 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer" role="contentinfo">
       <a href="https://shotdevs.live" target="_blank" rel="noopener noreferrer">©rizx | built by shotdevs</a>
     </footer>
 
   </main>
 
-  <!-- GO TOP -->
   <a href="#top" class="go-top" aria-label="Go to top">
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 15l7-7 7 7"/></svg>
   </a>
 
-  <!-- SCRIPTS (particles, reveals, menu, scroll) -->
   <script>
   // small helper: clamp
   function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
 
-  // Particle background (canvas, lightweight)
+  // Particle canvas logic
   (function(){
     const canvas = document.getElementById('particles-canvas');
     if(!canvas) return;
@@ -401,7 +384,7 @@
     });
   })();
 
-  // reduce motion: do fewer animations for users who prefer reduced motion
+  // reduce motion
   (function(){
     const prefers = window.matchMedia('(prefers-reduced-motion: reduce)');
     if(prefers.matches){
@@ -413,3 +396,4 @@
   </script>
 </body>
   </html>
+  
